@@ -1,6 +1,6 @@
 ---
 layout: page_collection
-title: Step 9 - Operate and Maintain Phase
+title: Step 9 - Operate and Maintain
 permalink: 9_step-9
 ---
 <script>

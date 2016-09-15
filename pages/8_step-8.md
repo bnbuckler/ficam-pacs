@@ -1,6 +1,6 @@
 ---
 layout: page_collection
-title: Step 8 - Implement Phase
+title: Step 8 - Implement
 permalink: 8_step-8
 ---
 <script>
