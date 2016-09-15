@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="utf-8"/>
+    <title>
+      
+        Step 9 - Automated Provisioning to PACS - PACS Development Playbook
+      
+    </title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/normalize.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/main.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/syntax.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/jquery-ui.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/ficam-pacs/favicon.ico?"/>
+
+	<script src="/ficam-pacs/assets/js/jquery-1.11.2.min.js"></script>
+	<script src="/ficam-pacs/assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/ficam-pacs/assets/js/accordion.js"></script>
+  <script src="/ficam-pacs/assets/js/jquery-ui.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/ficam-pacs/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <div class="wrap">
+          
+            <img class="logo" src="/ficam-pacs/img/logo.png" alt="Federal Identity Credential and Access Management">
+          
+          <h1 class="site-title"><div>PACS Development Playbook</div></h1>
+		  <!-- <div style="float:right;">
+			<a href="/ficam-guides/"  class="btn btn-primary">Playbook Home Page</a>
+			</div> -->
+        </div>
+      </header>
+
+<div class="wrap content">
+
+        <aside>
+  <a href="/issues" class="btn btn-primary">Submit Issues Here</a><br/>
+  <a href="/ficam-guides/"  class="btn btn-primary">Playbook Home Page</a>
+
+  <p class="intro"></p>
+  <a class="skip-link visuallyhidden focusable" href="#main">Skip to Main Content</a>
+
+  <nav class="sidebar-nav" role="navigation">
+    <ul>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/index.html" title="Home">Home</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/1_step-1" title="Step 1 - Begin Planning Phase">Step 1 - Begin Planning Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/2_step-2" title="Step 2 - Requirements and Design Phase">Step 2 - Requirements and Design Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/3_step-3" title="Step 3 - Build Phase">Step 3 - Build Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/4_step-4" title="Step 4 - Implement Phase">Step 4 - Implement Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/5_step-5" title="Step 5 - Operate and Maintain Phase">Step 5 - Operate and Maintain Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/6_step-6" title="Step 6 - Design Solution Architecture">Step 6 - Design Solution Architecture</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/7_step-7" title="Step 7 - Review Solution Components">Step 7 - Review Solution Components</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/8_step-8" title="Step 8 - Identify Common Design Characteristics">Step 8 - Identify Common Design Characteristics</a>
+			
+		</li>
+		
+		<li class="group sidebar-nav-active">
+			<a href="/ficam-pacs/9_step-9" title="Step 9 - Automated Provisioning to PACS">Step 9 - Automated Provisioning to PACS</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/10_step-10" title="Step 10 - Create Common Physical Access Scenarios">Step 10 - Create Common Physical Access Scenarios</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/contribute" title="Contribute">Contribute</a>
+			
+		</li>
+		
+    </ul>
+  </nav>
+</aside>
+
+
+        <section id="main" class="main-content" role="main">
+          <div style="float: right;">
+  <a href="/tree/master/" style="float:right;" class="btn btn-primary">Edit this page</a>
+</div>
+<h1 class="page-title">Step 9 - Automated Provisioning to PACS</h1>
+
+<script>
+$(function() {
+  $( "#accordion" ).accordion({
+    heightStyle: "content",
+    collapsible: "true",
+    active: "false"
+  });
+});
+</script>
+
+<script src="https://use.fontawesome.com/e20c671b68.js"></script>
+
+<hr />
+
+<p>Automated provisioning to PACS has developed into an important aspect of consideration for those who manage and maintain those systems. Automated provisioning of an individual‘s digital identity into a PACS helps to address system resource management issues and several overarching security concerns including, but not limited to:</p>
+
+<blockquote>
+  <ul>
+    <li>Ensuring that an individual‘s user record is based on authoritative identity data;</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>Providing system administrators the ability to better manage their PACS databases and keep records current; and</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>Allowing for centralized and automatic de-provisioning when an individual separates from an agency.</li>
+  </ul>
+</blockquote>
+
+<p>Traditionally, the data elements needed to create an authorized cardholder within a PACS database have been entered manually. In addition, the procedures for determining how someone is granted access are disparate across the government and even within a single agency. This has led to the realization that a set of standard data elements within a digital identity should be available to the PACS for the creation of a cardholder profile. An agency will benefit from the standardization that results from having the PACS populated with an established digital identity from authoritative source(s).</p>
+
+<p><br /></p>
+
+<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>Lesson Learned</span></h3>
+<p><span>Take your existing PACS infrastructure into account when selecting an automated provisioning approach. The Department of Health and Human Services (HHS) established the enterprise Credentialing Provisioning and Gateway System, which interconnects the HHS Smart Card Management System to the many stove-piped, proprietary PACS installed throughout HHS. HHS has been able to quickly realize the benefits of automated provisioning while reducing system development costs by leveraging their existing PACS to the maximum extent possible.</span></p>
+
+</div>
+
+<p><br /></p>
+
+<p>The target state of a modernized PACS is to realize a singular digital identity, which can be added to, modified, and deleted by one or more authoritative data source, as determined by each agency. The complexity of the digital identity is dependent upon the size of the agency, the facilities to be covered, and existing architecture in place to support the effort. The target state should be supportive of a single digital identity being created and maintained at the agency level for distributed cross-system use, a concept commonly referred to in the physical security community as ―single enrollment, many uses. Below, you’ll find commonly available automated provisioning approaches for your consideration.</p>
+
+<div id="accordion">
+
+  <h3 id="integrated-provisioning-capability">Integrated Provisioning Capability</h3>
+  <div>
+
+    <p>A fully automated provisioning capability that leverages a real time connector using open standards (i.e., eXtensible Markup Language [XML]) and enables two- way communication between the PACS and authoritative sources.</p>
+
+    <h2 id="i-classfa-fa-thumbs-o-up-aria-hiddentruei-nbspspan-stylecolor-0c5c89benefitsspan"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>  <span style="color: #0C5C89"><strong>Benefits</strong></span></h2>
+
+    <blockquote>
+      <ul>
+        <li>Significantly less level of effort for enrollment to PACS</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Minimized development costs</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Standardized naming conventions</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Reporting capability</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Works well if agency has a variety of vendors</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>More options for federation of PACS control into the enterprise</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Security personnel have assurance that data integrity is maintained across the entire landscape of PACS</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Provides the connected PACS with the most current cardholder account information, including access privileges</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Provides a robust and flexible, oftentimes web-based, interface that can access data from the connected PACS in a seamless and intuitive fashion</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Can function as a central point of revocation of cardholders’ accounts, further increasing an efficient security posture of the organization</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Maintains connections on a near real-time basis using resource connectors or service interfaces.</li>
+      </ul>
+    </blockquote>
+
+    <h2 id="i-classfa-fa-exclamation-triangle-aria-hiddentruei-span-stylecolor-0c5c89limitationsspan"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span style="color: #0C5C89"><strong>Limitations</strong></span></h2>
+
+    <blockquote>
+      <ul>
+        <li>Often reliant on software vendor after installation for maintenance</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Must maintain connectivity through real-time connectors or system interfaces to update systems</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Upgrading software can be costly</li>
+      </ul>
+    </blockquote>
+
+  </div>
+
+  <h3 id="vendor-interfaces">Vendor Interfaces</h3>
+  <div>
+
+    <p>Leverages custom scripts written by a vendor using application programming interfaces (API) and software development kits (SDKs).</p>
+
+    <h2 id="i-classfa-fa-thumbs-o-up-aria-hiddentruei-span-stylecolor-0c5c89benefitsspan"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span style="color: #0C5C89"><strong>Benefits</strong></span></h2>
+
+    <blockquote>
+      <ul>
+        <li>Allows data sharing between two systems on a long-term basis</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Utilizes existing systems SDKs and vendor expertise</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>May be more open/flexible than batch processing</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Pre-set schedules/time intervals for the transfer of new data/enrollments</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Higher level of quality assurance with data integrity during data transfer than offered in the single-use option</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Many current PACS and some legacy systems provide this option</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Properly developed scripts are typically functional across a broad range of software versions</li>
+      </ul>
+    </blockquote>
+
+    <h2 id="i-classfa-fa-exclamation-triangle-aria-hiddentruei-span-stylecolor-0c5c89limitationsspan-1"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span style="color: #0C5C89"><strong>Limitations</strong></span></h2>
+
+    <blockquote>
+      <ul>
+        <li>Incomplete mapping of cardholder information</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Real time operation depends on vendor</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Depending on vendor may require heavy investment</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Multiple systems would increase complexity in cross-system cardholder record integrity</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>May create inconsistency among systems which can negatively impact security</li>
+      </ul>
+    </blockquote>
+
+  </div>
+
+  <h3 id="batch-processes">Batch Processes</h3>
+  <div>
+
+    <p>Leverages a single-use scripted data transfer.</p>
+
+    <h2 id="i-classfa-fa-thumbs-o-up-aria-hiddentruei-span-stylecolor-0c5c89benefitsspan-1"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span style="color: #0C5C89"><strong>Benefits</strong></span></h2>
+
+    <blockquote>
+      <ul>
+        <li>Is easy to implement when transitioning from a legacy PACS to a new access control system</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Can utilize existing custom infrastructure</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Minimized effort through targeted scripts based on requirements</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>More flexible to meet particular agency requirements or unique existing infrastructure</li>
+      </ul>
+    </blockquote>
+
+    <h2 id="i-classfa-fa-exclamation-triangle-aria-hiddentruei-span-stylecolor-0c5c89limitationsspan-2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span style="color: #0C5C89"><strong>Limitations</strong></span></h2>
+
+    <blockquote>
+      <ul>
+        <li>May not completely eliminate manual operations as part of provisioning process</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Complexity may increase database management issues</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Possible difficulty in validating data transfer</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Generally used for one-time data transfer</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>No recurring data transfer as data changes in the authoritative source</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Does not guarantee the quality and uniqueness of imported cardholder accounts</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>A scripted process is generally only functional within a small range of software versions</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>There can be disconnects between the individuals who build the data transfer script and those who are familiar with the PACS system itself</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>A significant time investment may be required to ensure cardholder accounts properly reflect the individuals they are</li>
+      </ul>
+    </blockquote>
+
+  </div>
+</div>
+
+
+
+        </section>
+
+      </div><!-- /.wrap content -->
+
+      <footer role="contentinfo">
+        <div class="wrap">
+          <p>This project is maintained by <a href="">FICAM</a>.</p>
+
+          <p>Hosted on <a href="http://pages.github.com/">GitHub Pages</a>.</p>
+        </div><!--/.wrap -->
+      </footer>
+    </div> <!-- /.container -->
+    </body>
+</html>
