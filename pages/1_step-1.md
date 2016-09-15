@@ -1,6 +1,6 @@
 ---
 layout: page_collection
-title: Step 1 - Begin Planning Phase
+title: Step 1 - Begin Planning
 permalink: /1_step-1/
 ---
 <script>

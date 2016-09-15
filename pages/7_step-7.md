@@ -1,6 +1,6 @@
 ---
 layout: page_collection
-title: Step 7 - Review Solution Components
+title: Step 7 - Determine Automated Provisioning Approach
 permalink: 7_step-7
 ---
 <script>
@@ -14,88 +14,145 @@ $(function() {
 </script>
 
 <script src="https://use.fontawesome.com/e20c671b68.js"></script>
------------------------------------------------------------
+---------------------------------------------------------
 
-After you’ve reviewed the diagram that shows the many components that comprise an enterprise PACS solution, you can learn more in detail of the functionality of each component. See below to learn more about in detail about the components that make up the Enterprise Physical Access Infrastructure.
+Automated provisioning to PACS has developed into an important aspect of consideration for those who manage and maintain those systems. Automated provisioning of an individual‘s digital identity into a PACS helps to address system resource management issues and several overarching security concerns including, but not limited to:
+
+> * Ensuring that an individual‘s user record is based on authoritative identity data;
+
+> * Providing system administrators the ability to better manage their PACS databases and keep records current; and
+
+> * Allowing for centralized and automatic de-provisioning when an individual separates from an agency.
+
+Traditionally, the data elements needed to create an authorized cardholder within a PACS database have been entered manually. In addition, the procedures for determining how someone is granted access are disparate across the government and even within a single agency. This has led to the realization that a set of standard data elements within a digital identity should be available to the PACS for the creation of a cardholder profile. An agency will benefit from the standardization that results from having the PACS populated with an established digital identity from authoritative source(s). 
+
+<br>
+
+<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>Lesson Learned</span></h3>
+<p><span>Take your existing PACS infrastructure into account when selecting an automated provisioning approach. The Department of Health and Human Services (HHS) established the enterprise Credentialing Provisioning and Gateway System, which interconnects the HHS Smart Card Management System to the many stove-piped, proprietary PACS installed throughout HHS. HHS has been able to quickly realize the benefits of automated provisioning while reducing system development costs by leveraging their existing PACS to the maximum extent possible.</span></p>
+
+</div>
+
+<br>
+
+Your ageny's PACS should be able to realize a singular digital identity, which can be added to, modified, and deleted by one or more authoritative data source, as determined by each agency. The complexity of the digital identity is dependent upon the size of the agency, the facilities to be covered, and existing architecture in place to support the effort. The PACS should be supportive of a single digital identity being created and maintained at the agency level for distributed cross-system use, a concept commonly referred to in the physical security community as ―single enrollment, many uses. Below, you’ll find commonly available automated provisioning approaches for your consideration. 
 
 <div id="accordion" markdown="1">
 
-### PACS Server
+### Integrated Provisioning Capability
 <div markdown="1">
 
-The PACS server is an administrative tool used by the PACS operator to provision and de- provision access to a variety of physical resources, control and configure downstream access control and alarm devices in the system, journal all system activities, and execute security- related decisions. The PACS server is also typically the primary data source where a cardholder is enrolled or registered in the Cardholder Database. 
+A fully automated provisioning capability that leverages a real time connector using open standards (i.e., eXtensible Markup Language [XML]) and enables two- way communication between the PACS and authoritative sources.
 
-<br>
+## <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp;<span style="color: #0C5C89">**Benefits**</span>
 
-<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+> * Significantly less level of effort for enrollment to PACS 
 
-<h3><span>Implementation Tip</span></h3>
-<p><span>PACS servers can be managed by the agency at the enterprise level or by a service provider using cloud computing approaches. This model, called Security-as-a-Service, involves a technology provider hosting the security management applications on behalf of the end user. This arrangement allows agencies to leverage the cost savings, flexibility, and ease-of-deployment and eliminate the server and storage infrastructure at each individual site.</span></p>
+> * Minimized development costs
+
+> * Standardized naming conventions
+
+> * Reporting capability
+
+> * Works well if agency has a variety of vendors
+
+> * More options for federation of PACS control into the enterprise
+
+> * Security personnel have assurance that data integrity is maintained across the entire landscape of PACS
+
+> * Provides the connected PACS with the most current cardholder account information, including access privileges
+
+> * Provides a robust and flexible, oftentimes web-based, interface that can access data from the connected PACS in a seamless and intuitive fashion
+
+> * Can function as a central point of revocation of cardholders’ accounts, further increasing an efficient security posture of the organization
+
+> * Maintains connections on a near real-time basis using resource connectors or service interfaces.
+
+## <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span style="color: #0C5C89">**Limitations**</span>
+
+> * Often reliant on software vendor after installation for maintenance
+
+> * Must maintain connectivity through real-time connectors or system interfaces to update systems
+
+> * Upgrading software can be costly
 
 </div>
-</div>
 
-### Workstation
+### Vendor Interfaces
 <div markdown="1">
 
-The workstation is subordinate to the PACS Server and provides administrative functions to manage the PACS. In an enterprise network with a network-centric PACS, a workstation can be placed where needed and connected to the network in order to operate in conjunction with the PACS Server. Some of the typical functions controlled at a workstation are adding or removing cardholders and credentials from the PACS, downloading cardholder data, and setting access levels and functions of the field components. They may leverage thin clients using browser interfaces only, or use thick clients that use locally installed software.
+Leverages custom scripts written by a vendor using application programming interfaces (API) and software development kits (SDKs).
 
-<br>
+## <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span style="color: #0C5C89">**Benefits**</span>
 
-<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+> * Allows data sharing between two systems on a long-term basis
 
-<h3><span>Implementation Tip</span></h3>
-<p><span>Close coordination with network administrators is required to successfully integrate workstations as part of the PACS solution. PACS implementers should coordinate with IT resources to help determine workstation location and set up network connectivity.</span></p>
+> * Utilizes existing systems SDKs and vendor expertise
+
+> * May be more open/flexible than batch processing
+
+> * Pre-set schedules/time intervals for the transfer of new data/enrollments
+
+> * Higher level of quality assurance with data integrity during data transfer than offered in the single-use option
+
+> * Many current PACS and some legacy systems provide this option
+
+> * Properly developed scripts are typically functional across a broad range of software versions
+
+## <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span style="color: #0C5C89">**Limitations**</span> 
+
+> * Incomplete mapping of cardholder information
+
+> * Real time operation depends on vendor
+
+> * Depending on vendor may require heavy investment
+
+> * Multiple systems would increase complexity in cross-system cardholder record integrity
+
+> * May create inconsistency among systems which can negatively impact security
 
 </div>
-</div>
 
-### Controller/Panel
+### Batch Processes
 <div markdown="1">
 
-The controller/panel makes access control decisions by comparing cardholder data sent by the reader with the cardholder data stored locally. The controller/panel contains a number of cardholder records, usually one per cardholder, which typically consists of a cardholder record number, a cardholder photograph, a unique identifier (card number), a list of authorized access points, and a time when access is authorized. The decision to grant access is based upon successfully matching the cardholder data with an existing record and its associated access privileges. 
+Leverages a single-use scripted data transfer.
 
-There are some PACS that operate without a controller/panel by connecting a variety of standard reader types directly to a network through Internet Protocol (IP) bridges. This type of architecture might typically be found in PACS architectures leveraging a Security-as-a-Service model.
+## <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span style="color: #0C5C89">**Benefits**</span> 
 
-</div>
+> * Is easy to implement when transitioning from a legacy PACS to a new access control system
 
-### Card Reader
-<div markdown="1">
+> * Can utilize existing custom infrastructure
 
-A card reader is the device located at an access point to provide access control. A card reader may support communication with either the contact or contactless interface of the card, or in some cases support both. A  card reader should also support bi-directional communications with the system, processing the data and instructions from the card, sending the data to the associated control panel, and receiving data and instructions back from the control panel within an acceptable time frame.
+> * Minimized effort through targeted scripts based on requirements
 
-It is likely that a card reader will need to read and communicate various data from the card in order to support transactions that use multiple authentication modes, including Cardholder Unique Identifier (CHUID) and PKI authentication. When you begin to select card readers for your agency, it’s important to ensure that the card reader chosen is capable of supporting the desired PIV card authentication mechanisms at a particular access point, as not all card readers support all authentication mechanisms.
+> * More flexible to meet particular agency requirements or unique existing infrastructure
 
-<br>
+## <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span style="color: #0C5C89">**Limitations**</span> 
 
-<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+> * May not completely eliminate manual operations as part of provisioning process
 
-<h3><span>Implementation Tip</span></h3>
-<p><span>Ensure that environmental factors are taken into consideration when designing your agency’s PACS, particularly when deciding what types of card readers to purchase. Environmental factors, such as exposure to weather conditions, can impact the successful use of a card reader through the contact mode. An agency may need to deploy additional equipment, such as a protective cover, in these scenarios.</span></p>
+> * Complexity may increase database management issues
 
-</div>
+> * Possible difficulty in validating data transfer
 
-<br>
+> * Generally used for one-time data transfer
 
-It is likely that a card reader will need to read and communicate various data from the card in order to support transactions that use multiple authentication modes, including Cardholder Unique Identifier (CHUID) and PKI authentication. When you begin to select card readers for your agency, it’s important to ensure that the card reader chosen is capable of supporting the desired PIV card authentication mechanisms at a particular access point, as not all card readers support all authentication mechanisms.
+> * No recurring data transfer as data changes in the authoritative source
 
-<br>
+> * Does not guarantee the quality and uniqueness of imported cardholder accounts
 
-<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+> * A scripted process is generally only functional within a small range of software versions
 
-<h3><span>Implementation Tip</span></h3>
-<p><span>When selecting to use an “edge reader” or “Internet Protocol (IP) reader,” it is suggested that agencies choose the two part variety. This ensures that the controller function and IP port are located on the secure side of the wall, opposite the reader.</span></p>
+> * There can be disconnects between the individuals who build the data transfer script and those who are familiar with the PACS system itself
 
-</div>
-</div>
-
-### Cardholder Provisioning System
-<div markdown="1">
-
-A Cardholder Provisioning System is an example of an external interface that integrates between a PACS and an agency‘s authoritative identity source(s) to provision user accounts and their associated card data to the PACS. The use of a Cardholder Provisioning System represents a shift in the target state, where the PACS is a consumer of identity and PIV credential information. 
+> * A significant time investment may be required to ensure cardholder accounts properly reflect the individuals they are
 
 </div>
 </div>
+
 
 
 
