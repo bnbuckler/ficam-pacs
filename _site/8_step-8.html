@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="utf-8"/>
+    <title>
+      
+        Step 8 - Identify Common Design Characteristics - PACS Development Playbook
+      
+    </title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/normalize.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/main.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/syntax.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/jquery-ui.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/ficam-pacs/favicon.ico?"/>
+
+	<script src="/ficam-pacs/assets/js/jquery-1.11.2.min.js"></script>
+	<script src="/ficam-pacs/assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/ficam-pacs/assets/js/accordion.js"></script>
+  <script src="/ficam-pacs/assets/js/jquery-ui.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/ficam-pacs/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <div class="wrap">
+          
+            <img class="logo" src="/ficam-pacs/img/logo.png" alt="Federal Identity Credential and Access Management">
+          
+          <h1 class="site-title"><div>PACS Development Playbook</div></h1>
+		  <!-- <div style="float:right;">
+			<a href="/ficam-guides/"  class="btn btn-primary">Playbook Home Page</a>
+			</div> -->
+        </div>
+      </header>
+
+<div class="wrap content">
+
+        <aside>
+  <a href="/issues" class="btn btn-primary">Submit Issues Here</a><br/>
+  <a href="/ficam-guides/"  class="btn btn-primary">Playbook Home Page</a>
+
+  <p class="intro"></p>
+  <a class="skip-link visuallyhidden focusable" href="#main">Skip to Main Content</a>
+
+  <nav class="sidebar-nav" role="navigation">
+    <ul>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/index.html" title="Home">Home</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/1_step-1" title="Step 1 - Begin Planning Phase">Step 1 - Begin Planning Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/2_step-2" title="Step 2 - Requirements and Design Phase">Step 2 - Requirements and Design Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/3_step-3" title="Step 3 - Build Phase">Step 3 - Build Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/4_step-4" title="Step 4 - Implement Phase">Step 4 - Implement Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/5_step-5" title="Step 5 - Operate and Maintain Phase">Step 5 - Operate and Maintain Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/6_step-6" title="Step 6 - Design Solution Architecture">Step 6 - Design Solution Architecture</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/7_step-7" title="Step 7 - Review Solution Components">Step 7 - Review Solution Components</a>
+			
+		</li>
+		
+		<li class="group sidebar-nav-active">
+			<a href="/ficam-pacs/8_step-8" title="Step 8 - Identify Common Design Characteristics">Step 8 - Identify Common Design Characteristics</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/9_step-9" title="Step 9 - Automated Provisioning to PACS">Step 9 - Automated Provisioning to PACS</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/10_step-10" title="Step 10 - Create Common Physical Access Scenarios">Step 10 - Create Common Physical Access Scenarios</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/contribute" title="Contribute">Contribute</a>
+			
+		</li>
+		
+    </ul>
+  </nav>
+</aside>
+
+
+        <section id="main" class="main-content" role="main">
+          <div style="float: right;">
+  <a href="/tree/master/" style="float:right;" class="btn btn-primary">Edit this page</a>
+</div>
+<h1 class="page-title">Step 8 - Identify Common Design Characteristics</h1>
+
+<script>
+$(function() {
+  $( "#accordion" ).accordion({
+    heightStyle: "content",
+    collapsible: "true",
+    active: "false"
+  });
+});
+</script>
+
+<script src="https://use.fontawesome.com/e20c671b68.js"></script>
+
+<hr />
+
+<p>In addition to identifying a solution architecture and the supporting components, you should understand the common design characteristics necessary to successfully implement a PACS. Remember, it’s important to make design decisions that are in line with your agency’s  specific needs and relevant policies.</p>
+
+<p><br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center>PACS Characteristic ID </center></th>
+      <th><center> PACS Solution Characteristics </center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>PACS 1</strong></td>
+      <td>Easily integrated into a centralized management and control system that combines access control with intrusion detection, event monitoring, and integrated video capabilities.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 2</strong></td>
+      <td>Supports access to its functionality through both a web-based native user interface and a programmatic application programming interface (API).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 3</strong></td>
+      <td>Capable of validating the PIV card in accordance with the authentication mechanisms defined in <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-116.pdf" target="_blank"> SP 800-116. </a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 4</strong></td>
+      <td>Supports validation of other credential types, as necessary, during migration stages to full PIV card implementation for physical access.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 5</strong></td>
+      <td>Provides middleware system(s) that seamlessly integrate the path validation of certificates required by <a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.201-2.pdf" target="_blank"> FIPS 201. </a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 6</strong></td>
+      <td>Uses path validation to completely authenticate and validate the security relevant data objects within the PIV card and PIV-Interoperable (PIV-I) cards.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 7</strong></td>
+      <td>Provides system components that adhere to the Backend Attribute Exchange (BAE) Specification and are IPv6 addressable.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 8</strong></td>
+      <td>Provides a system controller that, with algorithms, will enforce all the rule checks prior to allowing access.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 9</strong></td>
+      <td>Adheres to the protocols and architecture recommended in this playbook.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 10</strong></td>
+      <td>Uses PKI certificates as a basis for system administration and visitor management between trusted organizations.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 11</strong></td>
+      <td>Included within the Federal Information Security Management Act (FISMA) Inventory of an organization.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 12</strong></td>
+      <td>Allows decision making logic to be local, rapid, located within the secure perimeter, and not dependent on a remote server.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 13</strong></td>
+      <td>Federated or synchronized with other identity stores that are used for logical access and other aspects of personnel management.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 14</strong></td>
+      <td>Consume and process credentials that were produced by authorities independent of the PACS, such as PIV, PIV-I, and facility access cards.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 15</strong></td>
+      <td>Read and extract the full Cardholder Unique Identifier (CHUID) from the PIV card, and recognize it within the controllers and server software.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 16</strong></td>
+      <td>Allows the PACS server authorization database to update access changes for affected user records in local PACS panels.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 17</strong></td>
+      <td>Provides a personal identification number (PIN) entry method to the PIV card.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 18</strong></td>
+      <td>Requests and receives the PIV Authentication Certificate from the card, sends data to external PKI infrastructure (Online Certificate Status Protocol [OCSP], Server-based Certificate Validation Protocol [SCVP], Certificate Revocation List [CRL]), and if valid, send to PACS server authorization database.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 19</strong></td>
+      <td>Allows the PACS authorization database to integrate to external PKI infrastructure and perform automatic validation of all registered PIV Authentication Certificates.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 20</strong></td>
+      <td>Continually checks and updates credential status after the cardholder’s credentials are determined as valid and enrolled in a PACS.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 21</strong></td>
+      <td>Provides PACS server software and associated downstream hardware (controllers) that are web services-based in order to allow for more efficient customization to end-user requirements and integration into middleware and external systems components, including Logical Access Control Systems (LACS).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 22</strong></td>
+      <td>Provides a capability to automatically change access level requirements for doors and portals according to preset Threat Condition levels.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 23</strong></td>
+      <td>Provides a capability to verify against an internal or integrated external watch list database when a card is presented to a reader for access. Ideally, the watch list should be stored both in the PACS server and controller.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PACS 24</strong></td>
+      <td>Provides a capability to compile reports with data from access records.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+
+      </div><!-- /.wrap content -->
+
+      <footer role="contentinfo">
+        <div class="wrap">
+          <p>This project is maintained by <a href="">FICAM</a>.</p>
+
+          <p>Hosted on <a href="http://pages.github.com/">GitHub Pages</a>.</p>
+        </div><!--/.wrap -->
+      </footer>
+    </div> <!-- /.container -->
+    </body>
+</html>

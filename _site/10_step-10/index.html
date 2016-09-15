@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="utf-8"/>
+    <title>
+      
+        Step 10 - Create Common Physical Access Scenarios - PACS Development Playbook
+      
+    </title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/normalize.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/main.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/syntax.css"/>
+    <link rel="stylesheet" href="/ficam-pacs/assets/css/jquery-ui.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/ficam-pacs/favicon.ico?"/>
+
+	<script src="/ficam-pacs/assets/js/jquery-1.11.2.min.js"></script>
+	<script src="/ficam-pacs/assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/ficam-pacs/assets/js/accordion.js"></script>
+  <script src="/ficam-pacs/assets/js/jquery-ui.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/ficam-pacs/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <div class="wrap">
+          
+            <img class="logo" src="/ficam-pacs/img/logo.png" alt="Federal Identity Credential and Access Management">
+          
+          <h1 class="site-title"><div>PACS Development Playbook</div></h1>
+		  <!-- <div style="float:right;">
+			<a href="/ficam-guides/"  class="btn btn-primary">Playbook Home Page</a>
+			</div> -->
+        </div>
+      </header>
+
+<div class="wrap content">
+
+        <aside>
+  <a href="/issues" class="btn btn-primary">Submit Issues Here</a><br/>
+  <a href="/ficam-guides/"  class="btn btn-primary">Playbook Home Page</a>
+
+  <p class="intro"></p>
+  <a class="skip-link visuallyhidden focusable" href="#main">Skip to Main Content</a>
+
+  <nav class="sidebar-nav" role="navigation">
+    <ul>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/index.html" title="Home">Home</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/1_step-1" title="Step 1 - Begin Planning Phase">Step 1 - Begin Planning Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/2_step-2" title="Step 2 - Requirements and Design Phase">Step 2 - Requirements and Design Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/3_step-3" title="Step 3 - Build Phase">Step 3 - Build Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/4_step-4" title="Step 4 - Implement Phase">Step 4 - Implement Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/5_step-5" title="Step 5 - Operate and Maintain Phase">Step 5 - Operate and Maintain Phase</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/6_step-6" title="Step 6 - Design Solution Architecture">Step 6 - Design Solution Architecture</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/7_step-7" title="Step 7 - Review Solution Components">Step 7 - Review Solution Components</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/8_step-8" title="Step 8 - Identify Common Design Characteristics">Step 8 - Identify Common Design Characteristics</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/9_step-9" title="Step 9 - Automated Provisioning to PACS">Step 9 - Automated Provisioning to PACS</a>
+			
+		</li>
+		
+		<li class="group sidebar-nav-active">
+			<a href="/ficam-pacs/10_step-10" title="Step 10 - Create Common Physical Access Scenarios">Step 10 - Create Common Physical Access Scenarios</a>
+			
+		</li>
+		
+		<li class="group ">
+			<a href="/ficam-pacs/contribute" title="Contribute">Contribute</a>
+			
+		</li>
+		
+    </ul>
+  </nav>
+</aside>
+
+
+        <section id="main" class="main-content" role="main">
+          <div style="float: right;">
+  <a href="/tree/master/" style="float:right;" class="btn btn-primary">Edit this page</a>
+</div>
+<h1 class="page-title">Step 10 - Create Common Physical Access Scenarios</h1>
+
+<script>
+$(function() {
+  $( "#accordion" ).accordion({
+    heightStyle: "content",
+    collapsible: "true",
+    active: "false"
+  });
+});
+</script>
+
+<script src="https://use.fontawesome.com/e20c671b68.js"></script>
+
+<hr />
+<p>TEST</p>
+
+<p>A primary focus of PACS implementation is the capability for agency PACS to electronically authenticate the PIV card in accordance with mechanisms specified in <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-116.pdf" target="_blank"> SP 800- 116 </a> and as determined based upon facility risk assessments. Using the PIV card for physical access will offer your agency the opportunity to align with the FICAM architecture and realize the enhanced security benefits of the authentication mechanisms on the PIV card.</p>
+
+<p>Below, you’ll find more information on the allowable PIV card authentication mechanisms for PACS, where it is appropriate to use each, and the benefits and limitations associated with each.</p>
+
+<div id="accordion">
+
+  <h3 id="cardhlolder-unique-identifier-chuid-authentication">Cardhlolder Unique Identifier (CHUID) Authentication</h3>
+  <div>
+
+    <p>The CHUID is a mandatory data object on the PIV card, which includes the Federal Agency Smart Credential Number (FASC-N) element that uniquely identifies the card. The CHUID also contains a 16- or 128-bit binary field called the Global Unique Identifier (GUID) that stores the Universally Unique Identifier (UUID), which is leveraged to identify PIV-I cards. The CHUID is a free-read data object that is available on the contactless interface of the PIV card. Of the available PIV card authentication mechanisms, it is more closely aligned with legacy PACS operations, which read and compare a number from the card against the PACS user database; however, CHUID is the weakest of the PIV authentication mechanisms.</p>
+
+    <p>Use of the CHUID mechanism involves reading the full CHUID and validating the signed data object and the certificate used to sign the CHUID. This process allows the PACS to detect modifications or alterations to a CHUID, protecting against counterfeiting. Even using this approach, the PACS is still vulnerable to cloned CHUID data objects. For this reason, CHUID validation is considered a zero-factor authentication method when used alone. It should only be used in the target state for areas identified as having extremely low risk following a careful facility risk assessment.</p>
+
+    <p><br /></p>
+
+    <div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>Implementation Tip</span></h3>
+<p><span>Educate your users on proper PIV card storage and handling. Improper storage or handling can break the contactless interface on the PIV card, preventing use of certain authentication mechanisms, such as the Cardholder Unique Identifier (CHUID), in your PACS and driving up program costs for replacing damaged PIV cards. Failing to properly store the PIV card in its electromagnetically opaque holder when not in use can also increase security risks for the skimming of card data.</span></p>
+
+</div>
+
+    <p><br /></p>
+
+    <p>Agencies may use CHUID authentication at access points separating two areas at the same impact level, either Controlled or Limited. Agencies may also use the CHUID authentication mechanism, when paired with a visual (VIS) authentication mechanism, at access points between Unrestricted and Controlled areas. Below, you’ll find the benefits and limitations of CHUID Authentication in PACS.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th><center> Benefits </center></th>
+          <th><center> Limitations </center></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>•	If the CHUID signature verification is performed, the PACS can be sure the CHUID came from a valid issuer and it has not been altered. <br /><br /> • The partial CHUID read presents the simplest implementation alternative when migrating from legacy PACS. <br /><br /> • In comparison with other mechanisms, the CHUID offers the smallest data read on the PIV card.</td>
+          <td>•	If the CHUID signature verification is performed, the PACS can be sure the CHUID came from a valid issuer and it has not been altered. <br /><br /> • The partial CHUID read presents the simplest implementation alternative when migrating from legacy PACS. <br /><br /> • In comparison with other mechanisms, the CHUID offers the smallest data read on the PIV card.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h3 id="cak-authentication">CAK Authentication</h3>
+  <div>
+
+    <p>CAK authentication involves verifying a claimed identity through validation of a digital certificate on the PIV card issued by a trusted CA.
+The CAK method is characterized by the following:</p>
+
+    <blockquote>
+      <ul>
+        <li>It may be used on either the contact or contactless interface, which is desirable in many PACS implementations</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>It does not require the entry of the PIN</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>It allows the PACS to determine the validity of certificates in real time or by pre- validating the certificates and storing the information in a cache</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>It leverages asymmetric key cryptography to perform certificate validation;</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>It is an optional certificate and may not be present on all agency PIV cards, which could impact interoperability</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>It provides single factor authentication, and thus is appropriate only for access to Controlled areas, unless used in combination with another authentication factor.</li>
+      </ul>
+    </blockquote>
+
+    <p><br /></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th><center> Benefits </center></th>
+          <th><center> Limitations </center></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>• CAK provides a higher assurance mechanism while still retaining the contactless capability. <br /><br /> • Cached certificate validation can provide rapid authentication with an inherently stronger validation compared to a standard CHUID read. <br /><br /> • Real-time certificate validation can provide strong authentication as it only relies upon the refresh rate of the published Certificate Revocation List (CRL). <br /><br /> • A personal identification number (PIN) match to a system on the PACS may provide additional security to CAK authentication (Note: This is not equivalent to a PIN activation on the PIV card).</td>
+          <td>• Certificate validation technology can be marginally slower than a CHUID validation technology dependent on product selection. <br /><br /> • Cached certificate results do not validate certificates in real-time, certificate status is based on PACS server to CRL refresh and server to panel refresh timeframes. <br /><br /> • Real-time certificate validation technology can require a longer read time when compared to a standard CHUID or cached certificate read. <br /><br /> • Not a native capability of many existing and available PACS systems, resulting in additional implementation costs and challenges. <br /><br /> • The CAK authenticates the PIV card, not the individual; therefore it provides only some assurance in the identity of the individual. <br /><br /> • CAK authentication can be vulnerable to social engineering and use of unreported lost or stolen PIV card (until card is revoked).</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h3 id="pki-authentication">PKI Authentication</h3>
+  <div>
+
+    <p>PKI authentication involves verifying a claimed identity through validation of a digital certificate on the PIV card issued by a trusted CA. For the PIV card, this may be accomplished using the PIV Authentication Key.</p>
+
+    <p>The PIV Authentication Key method is characterized by the following:</p>
+
+    <blockquote>
+      <ul>
+        <li>It provides two-factor authentication, since the cardholder must enter a PIN to unlock the card in order to successfully authenticate</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>It is a mandatory credential on the PIV card, and thus will be available on PIV cards of visitors from other agencies</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>Is accessible over the contact interface</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>It requires the PACS to determine the validity of certificates when an individual presents his card to a card reader</li>
+      </ul>
+    </blockquote>
+
+    <blockquote>
+      <ul>
+        <li>It may be used for authentication to areas up to and including Exclusion areas</li>
+      </ul>
+    </blockquote>
+
+    <p>The PKI validation of the PIV card represents a stronger alternative than standard CHUID-based authentication while meeting throughput expectations at facility access points. As noted in the limitations below, PKI validation has traditionally posed challenges related to transaction speed and support within commercially-available vendor products; however, ongoing advances in technology and processes are making PKI authentication more viable within an operational PACS environment.</p>
+
+    <p><br /></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th><center> Benefits </center></th>
+          <th><center> Limitations </center></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>• Cached certificate validation can provide rapid authentication with an inherently stronger validation compared to a standard CHUID read. <br /><br /> • Real-time certificate validation can provide strong authentication as it only relies upon the refresh rate of the published Certificate Revocation List (CRL).</td>
+          <td>• Certificate validation technology can be marginally slower than a CHUID validation technology dependent on product selection, real-time certificate validation technology can require a longer read time when compared to a standard CHUID or cached certificate read. <br /><br /> • Cached certificate results do not validate certificates in real-time, certificate status is based on PACS server to CRL refresh and server to panel refresh timeframes. <br /><br /> • Not a native capability of many existing and available PACS systems, resulting in additional implementation costs and challenges. <br /><br /> •	PKI authentication can be vulnerable to social engineering.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h3 id="biometric-authentication">Biometric Authentication</h3>
+  <div>
+
+    <p>Biometric authentication verifies an individual‘s identity by comparing the reference biometric template on the PIV card with the sample biometric template provided at the time of the transaction. This verification exchange occurs off-card, in the reader, or on a server. Every PIV card contains two fingerprint templates of the card holder in a standardized data format that is described  in <a href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-76-2.pdf" target="_blank"> NIST  SP  800-76. </a> Because  these  templates  are  standardized,  they  provide interoperability across a federated environment. As with several of the other objects on the card, the biometric on the PIV card is signed by the issuer. It is recommended that the PACS verify the digital signature on the biometric template data object to verify the authenticity of the biometric.</p>
+
+    <p>PACS readers that incorporate biometric technology, supporting software, and hardware logic are commercially available and utilized across multiple federal agencies. As a general premise, biometric access points provide a higher level of authentication at the expense of a slight reduction in throughput due to the additional time required for an individual to provide a biometric sample for comparison in addition to reading the PIV card.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th><center> Benefits </center></th>
+          <th><center> Limitations </center></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>•	The biometric on the PIV card is signed by the issuer, so the authenticity of the biometric can be validated by the PACS. <br /><br /> • Current biometric technology demonstrates low crossover error rates in NIST Minutia Exchange (MINEX) testing. <br /><br /> • The 1:1 biometric match represents the closest cardholder to PIV card validation possible. <br /><br /> •	Provides mitigation against fraudulent authentication attempts with synthetic fingerprints when conducted in Attended Biometric authentication (BIO-A) mode.</td>
+          <td>• Biometric authentication cannot be used on the contactless interface. <br /><br /> • This authentication mechanism by itself does not include authentication of the PIV card. <br /><br /> • Slower transaction time due to requirement for use of contact interface and user PIN entry. <br /><br /> • Biometric readers may not be viable at external access points, where environmental conditions can cause rapid equipment deterioration. <br /><br /> • Biometric authentication can be vulnerable to biometric impersonation.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h3 id="multi-factor-authentication">Multi-factor Authentication</h3>
+  <div>
+
+    <p>Multi-factor authentication involves a combination of three distinct types of authentication factors: a) something you have, in this case, a PIV card, b) something you know, knowledge of the PIN to access protected areas of the PIV card, and c) something you are, cardholder fingerprint comparison with biometric data stored on the card. Several of the PIV card authentication mechanisms, including reading a signed object from the card or performing challenge/response authentication with the card, only provide validation of possession of the PIV card (i.e., something you have). Likewise, biometric authentication also only provides a single factor of authentication (i.e., something you are).</p>
+
+    <p>To overcome the drawbacks and limitations of each individual factor of authentication, an agency may choose to combine two or more authentication mechanisms (e.g., PKI certificate and biometric) for the same transaction to meet facility area access requirements. Two-factor authentication is specified for access to Limited areas, and three-factor authentication is specified for access to Exclusion areas. Multi-factor authentication mechanisms should be commonly leveraged in areas that require higher levels of access control.</p>
+
+  </div>
+</div>
+
+<p><br /></p>
+
+<h3 id="span-stylecolor-0c5c89scenario-1-local-facility-accessspan"><span style="color: #0C5C89"><strong>Scenario 1: Local Facility Access</strong></span></h3>
+
+<p>HSPD-12 requires the use of identification that meets federal standards (i.e., the PIV card) in order to gain physical access to federally controlled facilities; however, there are certain user populations that need physical access but for whom issuance of the PIV card is not required. They include individuals that require access for less than six months, non-federal building tenants, interns, and visiting scientists, etc. These individuals for whom a PIV card is not required should be appropriately credentialed and validated in order to maintain adequate security for the facility.</p>
+
+<p>To achieve alignment with the FICAM architecture for populations that will not receive a PIV card, your agency should establish a common approach for issuing and accepting credentials for local facility access, where appropriate. We recommend your agency pursue an option that uses electronic authentication mechanisms and leverages the trust framework and PIV card infrastructure. Examples include accepting PIV-I cards from valid issuers or issuing individuals a card using approved card stock (ACS) with a trusted PKI certificate.</p>
+
+<p>Your agency may pursue an agency-specific approach if it is deemed the most cost effective based upon a cost/benefit analysis. Decisions around which user populations should receive a local facility access card may be made at the bureau/component or site level. In both of these instances, agencies are expected to move away from multiple, inconsistent credentials for these populations and leverage PIV infrastructure.</p>
+
+<p><br /></p>
+
+<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>ROI</span></h3>
+<p><span>Moving toward acceptance of PIV-I cards and local facility access cards that are interoperable with an agency’s existing PIV infrastructure not only increases security for non-PIV populations, but also allows an agency to see a greater return on its PIV issuance and PACS efforts. One large agency found that standardizing local facility access cards and visitor badges across its bureaus/components eliminated redundant credentialing and access control processes and yielded cost savings within their ICAM PACS implementation.</span></p>
+
+</div>
+
+<p><br /></p>
+
+<p>When determining agency policies for local facility access cardholders, access should be limited to the facility or specific areas within a facility that are appropriate for the individual. For example, a child care worker assigned to a child care facility might also have access to a facility‘s cafeteria or external restrooms, if necessary, but should not have unfettered access to other areas of the building not related to his work assignment.</p>
+
+<p><br /></p>
+
+<h3 id="span-stylecolor-0c5c89scenario-2-visitor-accessspan"><span style="color: #0C5C89"><strong>Scenario 2: Visitor Access</strong></span></h3>
+
+<p>In addition to managing physical access for its employees and contractors using a PIV card or other affiliates using a local facility access card, agencies may also need to address physical access for a wide variety of visitors to federal facilities. While it is expected that there will continue to be a degree of variation in visitor processes and systems due to agency-specific policy and security requirements, the FICAM architecutre defines several key aspects of  developing and operating a visitor management capability. To align with the FICAM architecutre, an agency should move away from manual, paper-based methods for managing visitors and implement an electronic enterprise VMS capability, using its existing PIV infrastructure (e.g., using visitor credentials that can be validated using the PIV-enabled PACS) and process automation wherever possible.</p>
+
+<p><br /></p>
+
+<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>Privacy Tip</span></h3>
+<p><span>Privacy requirements should not be reduced or removed when technology is introduced to an agency’s visitor management procedures. The same privacy protections for paper- based, manual processes should be applied to electronic, automated versions. For example, some electronic Visitor Management Systems (VMS) might offer the ability to scan an individual’s driver’s license to collect personal identifiers instead of having the individual handwrite his/her information. Agencies should ensure that only relevant and necessary information is obtained from the driver’s license and is handled in accordance with their privacy policies.</span></p>
+
+</div>
+
+<p><br /></p>
+
+<p>Your agency must accept PIV cards from visitors from another agency and electronically authenticate them in accordance with applicable access control procedures. In addition, visitors with PIV cards from another agency should be provisioned into the hosting agency‘s PACS and electronically authenticated for the timeframe during which access is required. These efforts will reduce risk, enhance interoperability, improve efficiency, and positively impact customer service. Agencies should also seek to leverage their existing infrastructure and accept PIV-I cards from visitors when they are available.</p>
+
+<p><br /></p>
+
+<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>Implementation Tip</span></h3>
+<p><span>Agencies should enable their security guard force with electronic authentication means wherever possible. This allows security guards to make access decisions based upon reliable, timely information. It also allows them to focus their time and attention on monitoring for other security threats, rather than performing visual authentication of credentials, which can help improve the overall security of the facility.</span></p>
+
+</div>
+
+<p><br /></p>
+
+<p>Agencies should consider a number of factors when designing their VMS capability and visitor management procedures, including:</p>
+
+<blockquote>
+  <ul>
+    <li><strong>Type of visitor.</strong> The FICAM architecture defines a visitor as an individual external to an agency who requires access (often short-term or intermittent) to a facility or site controlled by the agency. This covers a wide variety of visitor types that an agency may encounter, including federal employees from other agencies, business partners, or members of the public. Agencies should analyze the visitor population(s) associated with its facilities, as it may impact system design.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li><strong>Type of credential/identification used.</strong> In most cases, the types of visitors an agency encounters dictates the type of credential that is available for performing authentication. For example, a visitor from another agency should have a PIV card, whereas, a member of the public would likely only have a lower assurance credential available. An agency‘s visitor management policy should specify what kinds of IDs are acceptable and the procedures that will be used to authenticate them. Per M-11-11, an agency must accept and electronically verify PIV credentials issued by other federal agencies. Additionally as part of the FICAM architecture, agencies should be implementing the capability to accept PIV-I credentials from visitors, where an appropriate trust relationship exists.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li><strong>Background vetting.</strong> Different visitor types will have been subjected to varying levels of background vetting. For example, federal employees and contractors from another agency will meet the minimum PIV card investigation standards, whereas members of the public may not have any background vetting. your agency should consider the background vetting of its visitor populations when determining visitor procedures, such as the requirement for an escort.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li><strong>Areas to which a visitor requires access.</strong> Based on the facility risk assessment, an agency would likely adjust its visitor procedures if a visitor requires access to an Exclusion area, as opposed to a controlled area. Additionally, access points may need to be added to separate areas open to facility visitors from more restricted areas.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li><strong>Visitor pre-registration.</strong> The use case for visitor access in the FICAM architecture assumes that visitor access is substantiated by a sponsor, who validates the visitor‘s need to access the facility or area. Your agency should establish a pre-registration process to capture this sponsorship and provision visitor credential data, where applicable. Additionally, many agencies encounter visitors who arrive at reception with no pre-registration (e.g., members of the public visiting an open cafeteria or credit union). If your agency encounters this scenario should include it in process and VMS planning.</li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+
+<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>FAQ</span></h3>
+<p><strong>When should I require an escort for visitors at my facility?</strong></p>
+<p><span>Escort requirements should be based on the risk associated with the facility or area which a visitor is accessing. It is recommended that agencies have a consistent approach to escort policies while maintaining flexibility for decisions at the local site level, as each facility may have varying levels of risk.</span></p>
+
+</div>
+
+<p><br /></p>
+
+<p>It’s recommended that agencies implement a standard, enterprise-wide approach to address visitor types, levels of screening associated with these types, and standardized options for visitor credentials. This approach should incorporate considerations for interoperability, improving efficiencies in handling large volumes of visitors, and reuse of existing agency investments for physical access control. The business processes associated with providing credentials to visitors should also leverage efficiencies and best practices from the processes associated with established credentialing efforts, such as creation and issuance of PIV cards.</p>
+
+<p><br /></p>
+
+<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>ROI</span></h3>
+<p><strong>When should I require an escort for visitors at my facility?</strong></p>
+<p><span>Leveraging PIV and PIV-I cards from visitors within the Visitor Management System (VMS) and PACS allows an agency to better utilize its investment in PIV card and PACS efforts to incorporate PIV card. Furthermore, an agency can see reduced costs associated with manual, time-consuming authentication procedures for other credential types, which are also typically less secure.</span></p>
+
+</div>
+
+<p><br /></p>
+
+<p>When developing your electronic VMS capabilities, your agency should incorporate the following common characteristics:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center> Characteristic ID </center></th>
+      <th><center> Solution Characteristics </center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>VMS 1</strong></td>
+      <td>Supports validation of acceptable credentials of visitors, including PIV and PIV- I, using standard methods for each card type, including certificate checking</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 2</strong></td>
+      <td>Integrated into or interfaced with an electronic, FICAM architecture-aligned PACS, where possible</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 3</strong></td>
+      <td>Supports automatically provisioning and de-provisioning access rights for visitors based on length of stay</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 4</strong></td>
+      <td>Provides visitor pre-registration capability, where sponsors are able to enter biographic information for visitors, set up meeting times, and notify visitors</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 5</strong></td>
+      <td>Provides reporting and audit functions</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 6</strong></td>
+      <td>References the agency’s Watch List and denies access to those included on the list</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 7</strong></td>
+      <td>Allows security personnel to maintain their Watch List using a receptionist or administrator console</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 8</strong></td>
+      <td>Supports migration of select current data (or similar) from manual Watch List to VMS</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 9</strong></td>
+      <td>Supports automatic removal of visitor accounts after a specified period of inactivity</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 10</strong></td>
+      <td>Provides a central visitor database repository such that visitors do not have to repeat registration processes upon subsequent visits once their attributes have been captured</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>VMS 11</strong></td>
+      <td>Supports an additional level of security through advanced screening and background checks (if necessary)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
+
+<h3><span>Lesson Learned</span></h3>
+<p><span>The value of the PIV card doesn’t have to be limited to sites with an electronic PACS. USDA has created a web-based Card Confirmation Service that allows individuals at smaller field locations to input card data to check the validity of a visitor’s PIV card against the authoritative security database.</span></p>
+
+</div>
+
+
+
+        </section>
+
+      </div><!-- /.wrap content -->
+
+      <footer role="contentinfo">
+        <div class="wrap">
+          <p>This project is maintained by <a href="">FICAM</a>.</p>
+
+          <p>Hosted on <a href="http://pages.github.com/">GitHub Pages</a>.</p>
+        </div><!--/.wrap -->
+      </footer>
+    </div> <!-- /.container -->
+    </body>
+</html>
