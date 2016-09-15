@@ -45,39 +45,39 @@ navigation:
   url: index.html
   internal: true
   coll: false
-- text: Step 1 - Begin Planning Phase
+- text: Step 1 - Begin Planning
   url: 1_step-1
   internal: true
   coll: false
-- text: Step 2 - Requirements and Design Phase
+- text: Step 2 - Begin Requirements and Design
   url: 2_step-2
   internal: true
   coll: false
-- text: Step 3 - Build Phase
+- text: Step 3 - Design Solution Architecture
   url: 3_step-3
   internal: true
   coll: false
-- text: Step 4 - Implement Phase
+- text: Step 4 - Review Solution Components
   url: 4_step-4
   internal: true
   coll: false
-- text: Step 5 - Operate and Maintain Phase
+- text: Step 5 - Identify Common Design Characteristics
   url: 5_step-5
   internal: true
   coll: false
-- text: Step 6 - Design Solution Architecture
+- text: Step 6 - Begin Building Architecture
   url: 6_step-6
   internal: true
   coll: false
-- text: Step 7 - Review Solution Components
+- text: Step 7 - Determine Automated Provisioning Approach
   url: 7_step-7
   internal: true
   coll: false
-- text: Step 8 - Identify Common Design Characteristics
+- text: Step 8 - Implement
   url: 8_step-8
   internal: true
   coll: false
-- text: Step 9 - Automated Provisioning to PACS
+- text: Step 9 - Operate and Maintain
   url: 9_step-9
   internal: true
   coll: false

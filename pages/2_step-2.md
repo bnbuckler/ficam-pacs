@@ -1,6 +1,6 @@
 ---
 layout: page_collection
-title: Step 2 - Requirements and Design Phase
+title: Step 2 - Begin Requirements and Design Phase
 permalink: 2_step-2/
 ---
 <script>
