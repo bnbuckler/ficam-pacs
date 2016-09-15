@@ -16,7 +16,7 @@ $(function() {
 <script src="https://use.fontawesome.com/e20c671b68.js"></script>
 -----------------------------------------------------------
 
-After you’ve successfully deployed your agency’s modernized PACS solution to a live production level, you’ll begin the Operate and Maintain Phase. This phase lasts for the remainder of the time that the PACS solution is in use and consists of ongoing management and system maintenance activities such as: conducting training, operating the PACS solution, and protecting new resources as they come online.
+After you’ve successfully deployed your agency’s PACS solution to a live production level, you’ll begin the Operate and Maintain Phase. This phase lasts for the remainder of the time that the PACS solution is in use and consists of ongoing management and system maintenance activities such as: conducting training, operating the PACS solution, and protecting new resources as they come online.
 
 <br>
 
@@ -35,7 +35,7 @@ After you’ve successfully deployed your agency’s modernized PACS solution to
 
 > <i class="fa fa-check-square-o"></i> &nbsp;**Ongoing User Training.** Continue to update and modify user training curriculums as the PACS solution matures and new technology is implemented. Conduct additional training as necessary.
 
-> <i class="fa fa-check-square-o"></i> &nbsp;**Modify Provisioning Workflows.** Update provisioning workflows as business needs and access rules change over time. Changes may also be required as resource owners experience the benefits that can be provided by modernized PACS services and provisioning workflows can be streamlined.
+> <i class="fa fa-check-square-o"></i> &nbsp;**Modify Provisioning Workflows.** Update provisioning workflows as business needs and access rules change over time. Changes may also be required as resource owners experience the benefits that can be provided by PACS services and provisioning workflows can be streamlined.
 
 > <i class="fa fa-check-square-o"></i> &nbsp;**Conduct Hardware/Technology Refresh.** Conduct periodic updates and/or upgrades to solution hardware and other technology over the lifespan of a PACS solution as a means of extending the usable life of the solution or adding new capabilities.
 

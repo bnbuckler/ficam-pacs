@@ -16,11 +16,11 @@ $(function() {
 <script src="https://use.fontawesome.com/e20c671b68.js"></script>
 -----------------------------------------------------------
 
-In addition to identifying a solution architecture and the supporting components, you should understand the common design characteristics necessary to successfully implement a modernized PACS. Remember, it’s important to make design decisions that are in line with your agency’s  specific needs and relevant policies.
+In addition to identifying a solution architecture and the supporting components, you should understand the common design characteristics necessary to successfully implement a PACS. Remember, it’s important to make design decisions that are in line with your agency’s  specific needs and relevant policies.
 
 <br>
 
-| <center>PACS Characteristic ID </center> | </center> PACS Solution Characteristics </center> |
+| <center>PACS Characteristic ID </center> | <center> PACS Solution Characteristics </center> |
 |:----------------------------------------:|----------------------------|
 | **PACS 1** | Easily integrated into a centralized management and control system that combines access control with intrusion detection, event monitoring, and integrated video capabilities. |
 | **PACS 2** | Supports access to its functionality through both a web-based native user interface and a programmatic application programming interface (API). |
@@ -30,7 +30,7 @@ In addition to identifying a solution architecture and the supporting components
 | **PACS 6** | Uses path validation to completely authenticate and validate the security relevant data objects within the PIV card and PIV-Interoperable (PIV-I) cards. |
 | **PACS 7** | Provides system components that adhere to the Backend Attribute Exchange (BAE) Specification and are IPv6 addressable. |
 | **PACS 8** | Provides a system controller that, with algorithms, will enforce all the rule checks prior to allowing access. |
-| **PACS 9** | Adheres to the protocols and architecture recommended in Chapter 10 Initiative 7: Modernization of PACS, requirements. |
+| **PACS 9** | Adheres to the protocols and architecture recommended in this playbook. |
 | **PACS 10** | Uses PKI certificates as a basis for system administration and visitor management between trusted organizations. |
 | **PACS 11** | Included within the Federal Information Security Management Act (FISMA) Inventory of an organization. |
 | **PACS 12** | Allows decision making logic to be local, rapid, located within the secure perimeter, and not dependent on a remote server. |

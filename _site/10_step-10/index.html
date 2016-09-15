@@ -137,7 +137,7 @@ $(function() {
 
 <hr />
 
-<p>A primary focus of the PACS modernization implementation is the capability for agency PACS to electronically authenticate the PIV card in accordance with mechanisms specified in <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-116.pdf" target="_blank"> SP 800- 116 </a> and as determined based upon facility risk assessments. Using the PIV card for physical access will offer your agency the opportunity to align with the ICAM segment architecture and realize the enhanced security benefits of the authentication mechanisms on the PIV card.</p>
+<p>A primary focus of PACS implementation is the capability for agency PACS to electronically authenticate the PIV card in accordance with mechanisms specified in <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-116.pdf" target="_blank"> SP 800- 116 </a> and as determined based upon facility risk assessments. Using the PIV card for physical access will offer your agency the opportunity to align with the FICAM architecture and realize the enhanced security benefits of the authentication mechanisms on the PIV card.</p>
 
 <p>Below, you’ll find more information on the allowable PIV card authentication mechanisms for PACS, where it is appropriate to use each, and the benefits and limitations associated with each.</p>
 
@@ -148,7 +148,7 @@ $(function() {
 
     <p>The CHUID is a mandatory data object on the PIV card, which includes the Federal Agency Smart Credential Number (FASC-N) element that uniquely identifies the card. The CHUID also contains a 16- or 128-bit binary field called the Global Unique Identifier (GUID) that stores the Universally Unique Identifier (UUID), which is leveraged to identify PIV-I cards. The CHUID is a free-read data object that is available on the contactless interface of the PIV card. Of the available PIV card authentication mechanisms, it is more closely aligned with legacy PACS operations, which read and compare a number from the card against the PACS user database; however, CHUID is the weakest of the PIV authentication mechanisms.</p>
 
-    <p>In the target state, use of the CHUID mechanism involves reading the full CHUID and validating the signed data object and the certificate used to sign the CHUID. This process allows the PACS to detect modifications or alterations to a CHUID, protecting against counterfeiting. Even using this approach, the PACS is still vulnerable to cloned CHUID data objects. For this reason, CHUID validation is considered a zero-factor authentication method when used alone. It should only be used in the target state for areas identified as having extremely low risk following a careful facility risk assessment.</p>
+    <p>Use of the CHUID mechanism involves reading the full CHUID and validating the signed data object and the certificate used to sign the CHUID. This process allows the PACS to detect modifications or alterations to a CHUID, protecting against counterfeiting. Even using this approach, the PACS is still vulnerable to cloned CHUID data objects. For this reason, CHUID validation is considered a zero-factor authentication method when used alone. It should only be used in the target state for areas identified as having extremely low risk following a careful facility risk assessment.</p>
 
     <p><br /></p>
 
@@ -348,7 +348,7 @@ The CAK method is characterized by the following:</p>
 <div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
 
 <h3><span>ROI</span></h3>
-<p><span>Moving toward acceptance of PIV-I cards and local facility access cards that are interoperable with an agency’s existing PIV infrastructure not only increases security for non-PIV populations, but also allows an agency to see a greater return on its PIV issuance and PACS modernization efforts. One large agency found that standardizing local facility access cards and visitor badges across its bureaus/components eliminated redundant credentialing and access control processes and yielded cost savings within their ICAM PACS implementation.</span></p>
+<p><span>Moving toward acceptance of PIV-I cards and local facility access cards that are interoperable with an agency’s existing PIV infrastructure not only increases security for non-PIV populations, but also allows an agency to see a greater return on its PIV issuance and PACS efforts. One large agency found that standardizing local facility access cards and visitor badges across its bureaus/components eliminated redundant credentialing and access control processes and yielded cost savings within their ICAM PACS implementation.</span></p>
 
 </div>
 
@@ -390,13 +390,13 @@ The CAK method is characterized by the following:</p>
 
 <blockquote>
   <ul>
-    <li><strong>Type of visitor.</strong> The ICAM segment architecture defines a visitor as an individual external to an agency who requires access (often short-term or intermittent) to a facility or site controlled by the agency. This covers a wide variety of visitor types that an agency may encounter, including federal employees from other agencies, business partners, or members of the public. Agencies should analyze the visitor population(s) associated with its facilities, as it may impact system design.</li>
+    <li><strong>Type of visitor.</strong> The FICAM architecture defines a visitor as an individual external to an agency who requires access (often short-term or intermittent) to a facility or site controlled by the agency. This covers a wide variety of visitor types that an agency may encounter, including federal employees from other agencies, business partners, or members of the public. Agencies should analyze the visitor population(s) associated with its facilities, as it may impact system design.</li>
   </ul>
 </blockquote>
 
 <blockquote>
   <ul>
-    <li><strong>Type of credential/identification used.</strong> In most cases, the types of visitors an agency encounters dictates the type of credential that is available for performing authentication. For example, a visitor from another agency should have a PIV card, whereas, a member of the public would likely only have a lower assurance credential available. An agency‘s visitor management policy should specify what kinds of IDs are acceptable and the procedures that will be used to authenticate them. Per M-11-11, an agency must accept and electronically verify PIV credentials issued by other federal agencies. Additionally as part of the ICAM target state, agencies should be implementing the capability to accept PIV-I credentials from visitors, where an appropriate trust relationship exists.</li>
+    <li><strong>Type of credential/identification used.</strong> In most cases, the types of visitors an agency encounters dictates the type of credential that is available for performing authentication. For example, a visitor from another agency should have a PIV card, whereas, a member of the public would likely only have a lower assurance credential available. An agency‘s visitor management policy should specify what kinds of IDs are acceptable and the procedures that will be used to authenticate them. Per M-11-11, an agency must accept and electronically verify PIV credentials issued by other federal agencies. Additionally as part of the FICAM architecture, agencies should be implementing the capability to accept PIV-I credentials from visitors, where an appropriate trust relationship exists.</li>
   </ul>
 </blockquote>
 
@@ -414,7 +414,7 @@ The CAK method is characterized by the following:</p>
 
 <blockquote>
   <ul>
-    <li><strong>Visitor pre-registration.</strong> The use case for visitor access in the ICAM segment architecture assumes that visitor access is substantiated by a sponsor, who validates the visitor‘s need to access the facility or area. Your agency should establish a pre-registration process to capture this sponsorship and provision visitor credential data, where applicable. Additionally, many agencies encounter visitors who arrive at reception with no pre-registration (e.g., members of the public visiting an open cafeteria or credit union). If your agency encounters this scenario should include it in process and VMS planning.</li>
+    <li><strong>Visitor pre-registration.</strong> The use case for visitor access in the FICAM architecture assumes that visitor access is substantiated by a sponsor, who validates the visitor‘s need to access the facility or area. Your agency should establish a pre-registration process to capture this sponsorship and provision visitor credential data, where applicable. Additionally, many agencies encounter visitors who arrive at reception with no pre-registration (e.g., members of the public visiting an open cafeteria or credit union). If your agency encounters this scenario should include it in process and VMS planning.</li>
   </ul>
 </blockquote>
 
@@ -438,13 +438,13 @@ The CAK method is characterized by the following:</p>
 
 <h3><span>ROI</span></h3>
 <p><strong>When should I require an escort for visitors at my facility?</strong></p>
-<p><span>Leveraging PIV and PIV-I cards from visitors within the Visitor Management System (VMS) and PACS allows an agency to better utilize its investment in PIV card and PACS modernization efforts to incorporate PIV card. Furthermore, an agency can see reduced costs associated with manual, time-consuming authentication procedures for other credential types, which are also typically less secure.</span></p>
+<p><span>Leveraging PIV and PIV-I cards from visitors within the Visitor Management System (VMS) and PACS allows an agency to better utilize its investment in PIV card and PACS efforts to incorporate PIV card. Furthermore, an agency can see reduced costs associated with manual, time-consuming authentication procedures for other credential types, which are also typically less secure.</span></p>
 
 </div>
 
 <p><br /></p>
 
-<p>When developing your electronic VMS capabilities, your agency should incorporate the following common characteristics of a modernized, target state implementation:</p>
+<p>When developing your electronic VMS capabilities, your agency should incorporate the following common characteristics:</p>
 
 <table>
   <thead>
@@ -460,7 +460,7 @@ The CAK method is characterized by the following:</p>
     </tr>
     <tr>
       <td style="text-align: center"><strong>VMS 2</strong></td>
-      <td>Integrated into or interfaced with an electronic, modernized PACS, where possible</td>
+      <td>Integrated into or interfaced with an electronic, FICAM architecture-aligned PACS, where possible</td>
     </tr>
     <tr>
       <td style="text-align: center"><strong>VMS 3</strong></td>

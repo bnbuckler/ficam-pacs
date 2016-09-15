@@ -24,7 +24,7 @@ The Requirements and Design Phase follows the Planning Phase. In this phase, you
 
 > <i class="fa fa-check-square-o"></i> &nbsp;**Validate PACS Solution Requirements.** Validate the documented requirements with the appropriate stakeholders to ensure the PACS solution is properly designed to meet your agency’s needs. 
 
-> <i class="fa fa-check-square-o"></i> &nbsp;**Secure Funding Sources.** Use the PACS business plan to secure funding sources for the modernization effort. You should also consider your agency’s existing investments and how to use them with this effort. 
+> <i class="fa fa-check-square-o"></i> &nbsp;**Secure Funding Sources.** Use the PACS business plan to secure funding sources for the PACS effort. You should also consider your agency’s existing investments and how to use them with this effort. 
 
 > <i class="fa fa-check-square-o"></i> &nbsp;**Select Security Controls.** Conduct <a href="http://csrc.nist.gov/groups/SMA/fisma/controls.html" target="_blank"> Step 2 of the Risk Management Framework (RMF). </a> Choose the appropriate security controls and document the selected controls in the security plan. 
 
@@ -41,7 +41,7 @@ The Requirements and Design Phase follows the Planning Phase. In this phase, you
 <div style="background-color: #edf1f3;color: black;margin: 10px;padding: 10px">
 
 <h3><span>Implementation Tip</span></h3>
-<p><span>Be sure to include ICAM requirements for modernized PACS in facility arrangements, negotiations, and the procurement process for leased space. When these requirements are introduced during the Requirements and Design Phase, an agency can more easily ensure the proper requirements are incorporated into lease agreements.</span></p>
+<p><span>Be sure to include ICAM requirements for PACS in facility arrangements, negotiations, and the procurement process for leased space. When these requirements are introduced during the Requirements and Design Phase, an agency can more easily ensure the proper requirements are incorporated into lease agreements.</span></p>
 
 </div>
 
